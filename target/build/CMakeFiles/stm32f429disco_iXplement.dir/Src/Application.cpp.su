@@ -1,0 +1,139 @@
+new:146:14:void* operator new(std::size_t, void*)	16	static
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+functional:1458:17:void* std::_Any_data::_M_access()	16	static
+functional:1459:17:const void* std::_Any_data::_M_access() const	16	static
+functional:1685:5:std::_Function_base::_Function_base()	16	static
+functional:1687:5:std::_Function_base::~_Function_base()	16	static
+functional:1694:10:bool std::_Function_base::_M_empty() const	16	static
+atomic_base.h:80:3:constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)	16	static
+atomic_base.h:256:17:constexpr std::__atomic_base<_IntTp>::__atomic_base(std::__atomic_base<_IntTp>::__int_type) [with _ITp = unsigned char]	16	static
+atomic:563:17:constexpr std::atomic<unsigned char>::atomic(std::atomic<unsigned char>::__integral_type)	16	static
+IInitable.hpp:43:5:IConfig::IConfig()	16	static
+functional:1834:11:std::function<void()>::~function()	16	static
+LIS3DSH.hpp:121:18:LIS3DSH::Config::Config(bool, LIS3DSH::SampleFrequency, LIS3DSH::Scale, LIS3DSH::AntiAliasingFilter)	16	static
+functional:1834:11:std::function<void(unsigned char)>::~function()	16	static
+SPI.hpp:94:9:SPI::Config::Config(uint8_t, SPI::Mode, uint32_t)	24	static
+Application.hpp:47:13:Application::~Application()	16	static
+Application.hpp:47:13:virtual Application::~Application()	16	static
+Application.cpp:51:13:void CallbackLedGreenToggle()	8	static
+Application.cpp:56:13:void CallbackLedRedToggle()	8	static
+Application.cpp:61:13:void CallbackLedBlueToggle()	8	static
+Application.cpp:66:13:void CallbackMotionDataReceived()	8	static
+Application.cpp:93:47:Application::Application()::<lambda(uint8_t)>	16	static
+Application.cpp:78:1:Application::Application()	64	static
+Application.cpp:106:41:Application::Init()::<lambda()>	16	static
+Application.cpp:107:41:Application::Init()::<lambda()>	16	static
+Application.cpp:108:41:Application::Init()::<lambda()>	16	static
+Application.cpp:109:41:Application::Init()::<lambda()>	16	static
+Application.cpp:101:6:bool Application::Init()	72	static
+Application.cpp:147:6:void Application::Error()	16	static
+Application.cpp:168:6:bool Application::CreateTasks()	32	static
+Application.cpp:188:6:void Application::StartTasks()	16	static
+Application.cpp:201:6:void Application::MotionDataReceived(uint8_t)	24	static
+Application.cpp:215:6:void Application::CallbackLedGreenToggle()	16	static
+Application.cpp:223:6:void Application::CallbackLedRedToggle()	16	static
+Application.cpp:231:6:void Application::CallbackLedBlueToggle()	16	static
+Application.cpp:239:6:void Application::CallbackMotionDataReceived()	32	static
+Application.cpp:263:6:void vBlinkLedGreen(void*)	16	static
+Application.cpp:278:6:void vBlinkLedRed(void*)	16	static
+Application.cpp:293:6:void vBlinkLedBlue(void*)	16	static
+Application.cpp:307:6:void vMotionData(void*)	24	static
+Application.cpp:328:17:void vApplicationIdleHook()	4	static
+Application.cpp:336:17:void vApplicationStackOverflowHook(TaskHandle_t, char*)	16	static
+functional:525:12:constexpr std::_Maybe_unary_or_binary_function<void>::_Maybe_unary_or_binary_function()	16	static
+functional:1868:7:)>::function(std::nullptr_t) [with _Res = void; _ArgTypes = {}]	16	static
+stl_function.h:105:12:constexpr std::unary_function<unsigned char, void>::unary_function()	16	static
+functional:529:12:constexpr std::_Maybe_unary_or_binary_function<void, unsigned char>::_Maybe_unary_or_binary_function()	16	static
+functional:2042:16:)>::operator bool() const [with _Res = void; _ArgTypes = {}]	16	static
+functional:2122:5:) const [with _Res = void; _ArgTypes = {}]	16	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = Application::Application()::<lambda(uint8_t)>&]	16	static
+functional:2106:7:)>::function(_Functor) [with _Functor = Application::Application()::<lambda(uint8_t)>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {unsigned char}]	24	static
+move.h:76:5:constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1990:2:)>::operator=(_Functor&&) [with _Functor = Application::Init()::<lambda()>; _Res = void; _ArgTypes = {}]	32	static
+move.h:76:5:constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1990:2:)>::operator=(_Functor&&) [with _Functor = Application::Init()::<lambda()>; _Res = void; _ArgTypes = {}]	32	static
+move.h:76:5:constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1990:2:)>::operator=(_Functor&&) [with _Functor = Application::Init()::<lambda()>; _Res = void; _ArgTypes = {}]	32	static
+move.h:76:5:constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1990:2:)>::operator=(_Functor&&) [with _Functor = Application::Init()::<lambda()>; _Res = void; _ArgTypes = {}]	32	static
+atomic_base.h:265:7:std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::operator=(std::__atomic_base<_IntTp>::__int_type) [with _ITp = unsigned char]	24	static
+atomic_base.h:258:7:std::__atomic_base<_IntTp>::operator std::__atomic_base<_IntTp>::__int_type() const [with _ITp = unsigned char]	24	static
+functional:2014:12:)>&) [with _Res = void; _ArgTypes = {}]	16	static
+functional:1637:4:static bool std::_Function_base::_Base_manager<_Functor>::_M_not_empty_function(const _Tp&) [with _Tp = Application::Application()::<lambda(uint8_t)>; _Functor = Application::Application()::<lambda(uint8_t)>]	16	static
+functional:1617:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&) [with _Functor = Application::Application()::<lambda(uint8_t)>]	32	static
+move.h:76:5:constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = unsigned char]	16	static
+functional:1729:7:) [with _Functor = Application::Application()::<lambda(uint8_t)>; _ArgTypes = {unsigned char}]	24	static
+functional:1591:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Application::Application()::<lambda(uint8_t)>]	40	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = Application::Init()::<lambda()>&]	16	static
+functional:2106:7:)>::function(_Functor) [with _Functor = Application::Init()::<lambda()>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {}]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = Application::Init()::<lambda()>&]	16	static
+functional:2106:7:)>::function(_Functor) [with _Functor = Application::Init()::<lambda()>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {}]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = Application::Init()::<lambda()>&]	16	static
+functional:2106:7:)>::function(_Functor) [with _Functor = Application::Init()::<lambda()>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {}]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = Application::Init()::<lambda()>&]	16	static
+functional:2106:7:)>::function(_Functor) [with _Functor = Application::Init()::<lambda()>; <template-parameter-2-2> = void; <template-parameter-2-3> = void; _Res = void; _ArgTypes = {}]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = std::_Any_data&]	16	static
+move.h:179:5:typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = std::_Any_data]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = bool (*&)(std::_Any_data&, const std::_Any_data&, std::_Manager_operation)]	16	static
+move.h:179:5:typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = bool (*)(std::_Any_data&, const std::_Any_data&, std::_Manager_operation)]	24	static
+move.h:101:5:constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = void (*&)(const std::_Any_data&)]	16	static
+move.h:179:5:typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = void (*)(const std::_Any_data&)]	24	static
+functional:1642:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&, std::true_type) [with _Functor = Application::Application()::<lambda(uint8_t)>]	32	static
+functional:1549:2:static _Functor* std::_Function_base::_Base_manager<_Functor>::_M_get_pointer(const std::_Any_data&) [with _Functor = Application::Application()::<lambda(uint8_t)>]	24	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Application()::<lambda(uint8_t)>*]	16	static
+functional:1560:2:static void std::_Function_base::_Base_manager<_Functor>::_M_clone(std::_Any_data&, const std::_Any_data&, std::true_type) [with _Functor = Application::Application()::<lambda(uint8_t)>]	32	static
+functional:1577:2:static void std::_Function_base::_Base_manager<_Functor>::_M_destroy(std::_Any_data&, std::true_type) [with _Functor = Application::Application()::<lambda(uint8_t)>]	16	static
+functional:1637:4:static bool std::_Function_base::_Base_manager<_Functor>::_M_not_empty_function(const _Tp&) [with _Tp = Application::Init()::<lambda()>; _Functor = Application::Init()::<lambda()>]	16	static
+functional:1617:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1729:7:) [with _Functor = Application::Init()::<lambda()>; _ArgTypes = {}]	16	static
+functional:1591:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Application::Init()::<lambda()>]	40	static
+functional:1637:4:static bool std::_Function_base::_Base_manager<_Functor>::_M_not_empty_function(const _Tp&) [with _Tp = Application::Init()::<lambda()>; _Functor = Application::Init()::<lambda()>]	16	static
+functional:1617:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1729:7:) [with _Functor = Application::Init()::<lambda()>; _ArgTypes = {}]	16	static
+functional:1591:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Application::Init()::<lambda()>]	40	static
+functional:1637:4:static bool std::_Function_base::_Base_manager<_Functor>::_M_not_empty_function(const _Tp&) [with _Tp = Application::Init()::<lambda()>; _Functor = Application::Init()::<lambda()>]	16	static
+functional:1617:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1729:7:) [with _Functor = Application::Init()::<lambda()>; _ArgTypes = {}]	16	static
+functional:1591:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Application::Init()::<lambda()>]	40	static
+functional:1637:4:static bool std::_Function_base::_Base_manager<_Functor>::_M_not_empty_function(const _Tp&) [with _Tp = Application::Init()::<lambda()>; _Functor = Application::Init()::<lambda()>]	16	static
+functional:1617:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1729:7:) [with _Functor = Application::Init()::<lambda()>; _ArgTypes = {}]	16	static
+functional:1591:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Application::Init()::<lambda()>]	40	static
+functional:1468:7:const _Tp& std::_Any_data::_M_access() const [with _Tp = Application::Application()::<lambda(uint8_t)>]	16	static
+move.h:47:5:_Tp* std::__addressof(_Tp&) [with _Tp = const Application::Application()::<lambda(uint8_t)>]	16	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Application()::<lambda(uint8_t)>]	16	static
+functional:1642:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1549:2:static _Functor* std::_Function_base::_Base_manager<_Functor>::_M_get_pointer(const std::_Any_data&) [with _Functor = Application::Init()::<lambda()>]	24	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>*]	16	static
+functional:1560:2:static void std::_Function_base::_Base_manager<_Functor>::_M_clone(std::_Any_data&, const std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1577:2:static void std::_Function_base::_Base_manager<_Functor>::_M_destroy(std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	16	static
+functional:1642:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1549:2:static _Functor* std::_Function_base::_Base_manager<_Functor>::_M_get_pointer(const std::_Any_data&) [with _Functor = Application::Init()::<lambda()>]	24	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>*]	16	static
+functional:1560:2:static void std::_Function_base::_Base_manager<_Functor>::_M_clone(std::_Any_data&, const std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1577:2:static void std::_Function_base::_Base_manager<_Functor>::_M_destroy(std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	16	static
+functional:1642:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1549:2:static _Functor* std::_Function_base::_Base_manager<_Functor>::_M_get_pointer(const std::_Any_data&) [with _Functor = Application::Init()::<lambda()>]	24	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>*]	16	static
+functional:1560:2:static void std::_Function_base::_Base_manager<_Functor>::_M_clone(std::_Any_data&, const std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1577:2:static void std::_Function_base::_Base_manager<_Functor>::_M_destroy(std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	16	static
+functional:1642:2:static void std::_Function_base::_Base_manager<_Functor>::_M_init_functor(std::_Any_data&, _Functor&&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1549:2:static _Functor* std::_Function_base::_Base_manager<_Functor>::_M_get_pointer(const std::_Any_data&) [with _Functor = Application::Init()::<lambda()>]	24	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>*]	16	static
+functional:1560:2:static void std::_Function_base::_Base_manager<_Functor>::_M_clone(std::_Any_data&, const std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	32	static
+functional:1577:2:static void std::_Function_base::_Base_manager<_Functor>::_M_destroy(std::_Any_data&, std::true_type) [with _Functor = Application::Init()::<lambda()>]	16	static
+functional:1468:7:const _Tp& std::_Any_data::_M_access() const [with _Tp = Application::Init()::<lambda()>]	16	static
+move.h:47:5:_Tp* std::__addressof(_Tp&) [with _Tp = const Application::Init()::<lambda()>]	16	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1468:7:const _Tp& std::_Any_data::_M_access() const [with _Tp = Application::Init()::<lambda()>]	16	static
+move.h:47:5:_Tp* std::__addressof(_Tp&) [with _Tp = const Application::Init()::<lambda()>]	16	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1468:7:const _Tp& std::_Any_data::_M_access() const [with _Tp = Application::Init()::<lambda()>]	16	static
+move.h:47:5:_Tp* std::__addressof(_Tp&) [with _Tp = const Application::Init()::<lambda()>]	16	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>]	16	static
+functional:1468:7:const _Tp& std::_Any_data::_M_access() const [with _Tp = Application::Init()::<lambda()>]	16	static
+move.h:47:5:_Tp* std::__addressof(_Tp&) [with _Tp = const Application::Init()::<lambda()>]	16	static
+functional:1463:7:_Tp& std::_Any_data::_M_access() [with _Tp = Application::Init()::<lambda()>]	16	static
+Application.cpp:338:1:void __static_initialization_and_destruction_0(int, int)	16	static
+Application.cpp:338:1:cpp)	8	static
+Application.cpp:338:1:cpp)	8	static

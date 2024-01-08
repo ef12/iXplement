@@ -1,0 +1,4 @@
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+Board.cpp:33:6:static void Board::InitPins()	152	static
+Board.cpp:64:6:static bool Board::InitClock()	88	static
+Board.cpp:119:6:static void Board::Sleep()	56	static

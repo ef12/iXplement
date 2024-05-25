@@ -28,8 +28,13 @@
 
 # Executables
 *.exe
+*.elf
+*.bin
+*.hex
+*.map
 *.out
 *.app
+*.lst
 
 #mkdocs
 site/

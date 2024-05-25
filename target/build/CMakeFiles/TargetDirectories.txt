@@ -1,6 +1,0 @@
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/CMakeFiles/stm32f429disco_iXplement.dir
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/CMakeFiles/edit_cache.dir
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/CMakeFiles/rebuild_cache.dir
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/FreeRTOS/CMakeFiles/freertos.dir
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/FreeRTOS/CMakeFiles/edit_cache.dir
-C:/Users/efrank/Documents/SW_Dev/iXplement/target/build/FreeRTOS/CMakeFiles/rebuild_cache.dir

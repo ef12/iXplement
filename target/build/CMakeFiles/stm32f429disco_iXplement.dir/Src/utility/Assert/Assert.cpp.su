@@ -1,4 +1,0 @@
-Assert.cpp:52:6:void _expect_log(const char*, int, const char*)	160	static
-Assert.cpp:66:6:void _expect_breakpoint()	4	static
-Assert.cpp:75:6:void _assert_breakpoint()	4	static
-Assert.cpp:87:6:void _assert_reset(const char*, int, const char*)	24	static

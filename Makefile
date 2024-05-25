@@ -13,7 +13,7 @@
 ######################################
 # target
 ######################################
-TARGET = xproj
+TARGET = ixplement
 
 
 ######################################
@@ -34,17 +34,12 @@ BUILD_DIR = build
 ######################################
 # source
 ######################################
+# C Directories
+SRC_DIRS = \
+Core/Src \
+USB_HOST
 # C sources
 C_SOURCES =  \
-Core/Src/main.c \
-Core/Src/peripherals.c \
-Core/Src/freertos.c \
-Core/Src/stm32f4xx_it.c \
-Core/Src/stm32f4xx_hal_msp.c \
-Core/Src/stm32f4xx_hal_timebase_tim.c \
-USB_HOST/App/usb_host.c \
-USB_HOST/Target/usbh_conf.c \
-USB_HOST/Target/usbh_platform.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
@@ -72,7 +67,6 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
-Core/Src/system_stm32f4xx.c \
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
 Middlewares/Third_Party/FreeRTOS/Source/list.c \
@@ -88,6 +82,8 @@ Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c \
 Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c \
 Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c \
 Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c  
+
+C_SOURCES += $(shell find $(SRC_DIRS) -name *.c)
 
 # ASM sources
 ASM_SOURCES =  \

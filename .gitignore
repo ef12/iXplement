@@ -32,4 +32,7 @@
 *.app
 
 #mkdocs
-site/ 
+site/
+
+#build
+build/

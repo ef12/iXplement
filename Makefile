@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C Directories
 SRC_DIRS = \
+App/Src \
 Core/Src \
 USB_HOST
 # C sources
@@ -144,6 +145,7 @@ AS_INCLUDES =  \
 
 # C includes
 C_INCLUDES =  \
+-IApp/Inc \
 -ICore/Inc \
 -IUSB_HOST/App \
 -IUSB_HOST/Target \

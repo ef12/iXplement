@@ -18,45 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
-#include "main.h"
-#include "cmsis_os.h"
-#include "usb_host.h"
 #include <stdint.h>
+
+#include"cmsis_os.h"
+#include "app.h"
 #include "peripherals.h"
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-osThreadId defaultTaskHandle;
-
-
-void StartDefaultTask(void const * argument);
-
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
+#include "usb_host.h"
 
 /**
   * @brief  The application entry point.
@@ -65,11 +32,7 @@ void StartDefaultTask(void const * argument);
 int main(void)
 {
   peripherals_init();
-  /* Create the thread(s) */
-  /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-
+  app_init();
   osKernelStart();
 
   while (1)
@@ -79,34 +42,4 @@ int main(void)
 }
 
 
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-  static uint8_t task_delay = 50;
-  /* Infinite loop */
-  for(;;)
-  {
-	  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-    if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) != GPIO_PIN_RESET)
-    {
-      if (50== task_delay)
-      {
-        task_delay = 100;
-      }
-      else
-      {
-        task_delay = 50;
-      }
-      /* Some Debouncing */
-      osDelay(100);
-    }
-    osDelay(task_delay);
-  }
-  /* USER CODE END 5 */
-}
+

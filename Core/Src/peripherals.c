@@ -1,7 +1,6 @@
 #include "peripherals.h"
-#include "main.h"
 
-/* Private variables ---------------------------------------------------------*/
+/* Private variables ------------------------------#include "usb_host.h"---------------------------*/
 CAN_HandleTypeDef hcan2;
 
 CRC_HandleTypeDef hcrc;

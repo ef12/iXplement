@@ -40,4 +40,5 @@
 site/
 
 #build
+.vscode/settings.json
 build/

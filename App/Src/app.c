@@ -26,16 +26,16 @@ void app_init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
-  static uint8_t task_delay = 50;
+  static uint32_t task_delay = 50;
   /* Infinite loop */
   for(;;)
   {
 	  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
     if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) != GPIO_PIN_RESET)
     {
-      if (50== task_delay)
+      if (50 == task_delay)
       {
-        task_delay = 100;
+        task_delay = 250;
       }
       else
       {

@@ -19,12 +19,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 #include <stdint.h>
-
+extern "C"
+{
 #include"cmsis_os.h"
 #include "app.h"
 #include "peripherals.h"
 #include "usb_host.h"
-
+}
 /**
   * @brief  The application entry point.
   * @retval int

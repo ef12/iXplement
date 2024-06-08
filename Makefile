@@ -38,7 +38,9 @@ BUILD_DIR = build
 SRC_DIRS = \
 App/Src \
 Core/Src \
-USB_HOST
+USB_HOST \
+Middlewares/AgIsoStack
+
 # C sources
 C_SOURCES =  \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c \
@@ -139,6 +141,7 @@ AS_DEFS =
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
 -DSTM32F429xx
+# -DCAN_STACK_DISABLE_THREADS
 
 
 # AS includes
@@ -158,8 +161,12 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IMiddlewares/ST/STM32_USB_Host_Library/Core/Inc \
 -IMiddlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc \
+-IMiddlewares/AgIsoStack/src \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-IMiddlewares/AgIsoStack/hardware_integration/include \
+-IMiddlewares/AgIsoStack/isobus/include \
+-IMiddlewares/AgIsoStack/utility/include
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections

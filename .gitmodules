@@ -1,0 +1,3 @@
+[submodule "Middlewares/AgIsoStack"]
+	path = Middlewares/AgIsoStack
+	url = https://github.com/Open-Agriculture/AgIsoStack-plus-plus.git

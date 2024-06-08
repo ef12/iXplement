@@ -62,6 +62,9 @@
     "usb_host.h": "c",
     "stm32f4xx_hal.h": "c",
     "peripherals.h": "c",
-    "usbh_core.h": "c"
+    "usbh_core.h": "c",
+    "mutex": "cpp",
+    "type_traits": "c",
+    "algorithm": "c"
   }
 }

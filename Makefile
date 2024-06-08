@@ -39,7 +39,8 @@ SRC_DIRS = \
 App/Src \
 Core/Src \
 USB_HOST \
-Middlewares/AgIsoStack
+Middlewares/AgIsoStack/isobus/src \
+Middlewares/AgIsoStack/utility/src
 
 # C sources
 C_SOURCES =  \
@@ -87,6 +88,7 @@ Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c \
 Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c  
 
 C_SOURCES += $(shell find $(SRC_DIRS) -name *.c)
+CXX_SOURCES += Middlewares/AgIsoStack/hardware_integration/src/can_hardware_interface.cpp
 CXX_SOURCES += $(shell find $(SRC_DIRS) -name *.cpp)
 # ASM sources
 ASM_SOURCES =  \
@@ -164,17 +166,32 @@ C_INCLUDES =  \
 -IMiddlewares/AgIsoStack/src \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
 -IDrivers/CMSIS/Include \
--IMiddlewares/AgIsoStack/hardware_integration/include \
 -IMiddlewares/AgIsoStack/isobus/include \
+-IMiddlewares/AgIsoStack/hardware_integration/include \
 -IMiddlewares/AgIsoStack/utility/include
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
-CFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS += $(MCU)
+CFLAGS += $(C_DEFS) 
+CFLAGS += $(C_INCLUDES)
+CFLAGS += $(OPT)
+CFLAGS += -Wall
+CFLAGS += -fdata-sections
+CFLAGS += -ffunction-sections
+CFLAGS += -DCAN_STACK_DISABLE_THREADS
 
 # compile g++ flags for main.cpp
-CXXFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CXXFLAGS += $(MCU)
+CXXFLAGS += $(C_DEFS)
+CXXFLAGS += $(C_INCLUDES)
+CXXFLAGS += $(OPT)
+CXXFLAGS += -Wall
+CXXFLAGS += -fdata-sections
+CXXFLAGS += -ffunction-sections
+CXXFLAGS += -std=c++14
+CXXFLAGS += -DCAN_STACK_DISABLE_THREADS
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
@@ -195,11 +212,10 @@ LDSCRIPT = STM32F429ZITx_FLASH.ld
 # libraries
 LIBS = -lc -lm -lnosys 
 LIBDIR = 
-LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
+LDFLAGS = $(MCU) -specs=nano.specs -specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
-
 
 #######################################
 # build the application

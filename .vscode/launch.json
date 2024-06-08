@@ -4,7 +4,7 @@
     {
       "name": "C/C++ Runner: Debug Session",
       "cwd": "${workspaceRoot}",
-      "executable": "build/xproj.elf",
+      "executable": "build/ixplement.elf",
       "preLaunchTask": "flash", // This will build and then flash
       "request": "launch",
       "type": "cortex-debug",

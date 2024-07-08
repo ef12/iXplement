@@ -1,0 +1,12 @@
+using sysbus
+mach create "stm32f429disco"
+include stm32f429disco.repl
+
+# Load the ELF binary
+sysbus LoadELF ../build/ixplement.elf
+
+# Create UART connection
+uart2 CreateServerSocketTerminal 1234
+
+# Start emulation
+start

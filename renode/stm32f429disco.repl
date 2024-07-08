@@ -1,0 +1,34 @@
+using sysbus
+mach create "stm32f429disco"
+cpu:
+    Cortex-M4
+    init gdbServerPort 3333
+
+sysbus:
+    InitMemBase 0x08000000
+    mem 0x08000000 0x100000       # Flash
+    mem 0x20000000 0x20000        # SRAM
+    mem 0x60000000 0x200000       # External RAM
+
+    # Define UART
+    uart2: UART @ sysbus 0x40004400
+    connector Connect sysbus.uart2 uart2
+
+    # Define CAN controllers
+    can1: CAN @ sysbus 0x40006400
+    can2: CAN @ sysbus 0x40006800
+
+    # Define GPIOs
+    gpioa: GPIOPort @ sysbus 0x40020000
+    gpiob: GPIOPort @ sysbus 0x40020400
+    gpioc: GPIOPort @ sysbus 0x40020800
+    gpiod: GPIOPort @ sysbus 0x40020C00
+    gpioe: GPIOPort @ sysbus 0x40021000
+    gpiof: GPIOPort @ sysbus 0x40021400
+    gpiog: GPIOPort @ sysbus 0x40021800
+    gpioh: GPIOPort @ sysbus 0x40021C00
+    gpioi: GPIOPort @ sysbus 0x40022000
+
+    # Define other peripherals as needed
+
+machine StartGDBServer 3333

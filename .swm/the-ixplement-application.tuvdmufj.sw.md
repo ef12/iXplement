@@ -13,65 +13,19 @@ We will cover:
 
 3. How the button press is handled to change the LED toggle frequency.
 
-# Task creation and start
+# Task creation
 
-<SwmSnippet path="/App/Src/app.c" line="1">
+<SwmSnippet path="/App/Src/app.c" line="11">
 
 ---
 
-The first part of the implementation is the creation and start of the task. This is done in the <SwmToken path="/App/Src/app.c" pos="9:2:2" line-data="void app_init(void)">`app_init`</SwmToken> function in the <SwmPath>[App/Src/app.c](/App/Src/app.c)</SwmPath> file. The task is defined with a normal priority and a stack size of 4096 bytes. After the task is defined, it is created and started. The handle to the task is stored in the <SwmToken path="/App/Src/app.c" pos="5:2:2" line-data="osThreadId defaultTaskHandle;">`defaultTaskHandle`</SwmToken> variable for future reference.
+This code snippet is used to create a thread named `defaultTask` with the function `StartDefaultTask` as its entry point. The thread has a normal priority and a stack size of 4096 bytes. The `defaultTaskHandle` variable will hold a reference to the created thread.
 
 ```c
-#include "app.h"
-#include "peripherals.h"
-#include "cmsis_os.h"
-
-osThreadId defaultTaskHandle;
-
-void StartDefaultTask(void const * argument);
-
-void app_init(void)
-{
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
+   /* definition and creation of defaultTask */
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
-}
-
-
-
-
-  /* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
-{
-  static uint32_t task_delay = 50;
-  /* Infinite loop */
-  for(;;)
-  {
-	  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-    if(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) != GPIO_PIN_RESET)
-    {
-      if (50 == task_delay)
-      {
-        task_delay = 250;
-      }
-      else
-      {
-        task_delay = 50;
-      }
-      /* Some Debouncing */
-      osDelay(100);
-    }
-    osDelay(task_delay);
-  }
-  /* USER CODE END 5 */
-}
 ```
 
 ---
@@ -98,8 +52,8 @@ void StartDefaultTask(void const * argument);
 void app_init(void)
 {
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
+   /* definition and creation of defaultTask */
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 }
 
@@ -172,8 +126,8 @@ void StartDefaultTask(void const * argument);
 void app_init(void)
 {
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
+   /* definition and creation of defaultTask */
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 }
 
